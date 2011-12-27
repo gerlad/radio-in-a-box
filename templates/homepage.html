@@ -1,0 +1,38 @@
+{% extends "banner_base.html" %}
+
+{% load i18n %}
+{% load ifsetting_tag %}
+
+{% block head_title %}{% trans "Welcome" %}{% endblock %}
+
+{% block body_class %}home{% endblock %}
+
+{% block banner %}
+
+    <h1>{% trans "Radio in a Box" %}</h1><br/>
+    <p>
+        {% blocktrans %}
+        <em>Radio in a Box</em> is an experiment in <a href="http://streetfightmag.com/2011/10/31/public-radio-gears-up-for-hyperlocal-news-innovation/">hyperlocal radio</a>.
+        <p>It's purpose is to provide a starting point for websites interested in including broadcast content as a part of their media strategy. <em>Radio in a Box</em> is a core technology underlying <a href="http://itsneworleans.com/">It's New Orleans</a>.</p>
+        {% endblocktrans %}
+    </p>
+    
+    <p>
+        {% blocktrans %}
+        <p>It's plain that radio and the Web are natural partners. <em>Radio in a Box</em> can help you get web-based broadcast content up and running quickly.</p>
+        {% endblocktrans %}
+    </p>
+<br />
+    {% if user.is_authenticated %}
+        {% url upload as upload_url %}
+        <p class="upload">{% blocktrans %} <a href="{{ upload_url }}" class="btn primary large">Try it out.</a>{% endblocktrans %}</p>
+    {% else %}
+        {% url acct_login as login_url %}
+        {% ifsetting ACCOUNT_OPEN_SIGNUP %}
+            {% url acct_signup as signup_url %}
+            <p>{% blocktrans %}You can <a href="{{ login_url }}" class="btn">Log In</a> or <a href="{{ signup_url }}" class="btn primary">Sign Up</a> to learn more.{% endblocktrans %}</p>
+        {% else %}
+            <p>{% blocktrans %}You can <a href="{{ login_url }}" class="btn primary large">Log In</a> to try out the site.{% endblocktrans %}</p>
+        {% endifsetting %}
+    {% endif %}
+{% endblock %}
