@@ -1,6 +1,6 @@
-# Radio in Box #
+# Radio in a Box #
 
-_Radio in Box_ is an experiment in hyperlocal radio that's near by, perhaps right next door.
+_Radio in a Box_ is an experiment in hyperlocal radio that's near by, perhaps next door. It uses [Django](https://www.djangoproject.com/), [Pinax](http://pinaxproject.com/), and [Bootstrap](http://twitter.github.com/bootstrap/).
 
 ### Installation and getting started ###
 
@@ -13,7 +13,7 @@ Follow the documentation at [virtualenv](http://www.virtualenv.org/) or [virtual
 
 #### Checkout the project
 
-    $ git clone git://github.com/geraldmc/radioradio.git
+    $ git clone git://github.com/gerlad/radio-in-a-box.git
 
 #### Install all project requirements (Django, Pinax, Bootstrap, etc.):
 
