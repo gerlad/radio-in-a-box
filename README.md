@@ -1,6 +1,6 @@
 # Radio in a Box #
 
-_Radio in a Box_ is an experiment in radio that's near by, perhaps next door. It uses [Django](https://www.djangoproject.com/), [Pinax](http://pinaxproject.com/), and [Bootstrap](http://twitter.github.com/bootstrap/).
+_Radio in a Box_ is an experiment in radio that's nearby, perhaps next door. It uses [Django](https://www.djangoproject.com/), [Pinax](http://pinaxproject.com/), and [Bootstrap](http://twitter.github.com/bootstrap/).
 
 ### Installation and getting started ###
 
